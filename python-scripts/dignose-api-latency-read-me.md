@@ -15,29 +15,13 @@ The script maps out the exact network boundaries of an API request:
 
 ---
 
-## 🛠️ Prerequisites & Installation
+## 🛠️ Setup & Installation
 
-This project utilizes [uv](https://github.com), an ultra-fast Python package installer and resolver.
+Since this project is already configured with `uv`, you don't need to initialize anything manually. Just sync the dependencies and you are ready to go.
 
-### 1. Setup the Environment
+### 1. Sync Dependencies
 
-If you haven't initialized your workspace directory yet:
-
-```bash
-uv init
-```
-
-### 2. Add Dependencies
-
-Add the required DNS packet inspection library directly to your project environment:
-
-```bash
-uv add dnspython
-```
-
-### 3. Sync the Project
-
-Ensure your local lockfile matches and resolves perfectly within your target folder:
+Run this command inside the project folder to install the required packages (`dnspython` and core dependencies) into your local environment:
 
 ```bash
 uv sync
@@ -47,7 +31,7 @@ uv sync
 
 ## 💻 Usage
 
-You can safely run the diagnostic utility without manually managing virtual environments by executing it through `uv run`.
+Run the diagnostic utility directly using `uv run`. This automatically manages the environment and executes the script seamlessly:
 
 ```bash
 uv run diagnose-api-latency.py
